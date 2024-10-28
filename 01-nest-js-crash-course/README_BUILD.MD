@@ -20,7 +20,7 @@ Code: [<https://github.com/stuyy/nestjs-crash>...](https://www.youtube.com/redir
 - [x] 0:00 Introduction
 - [x] 2:00 Install Nest CLI
 - [x] 3:10 Create Nest Project
-- [ ] 5:00 Project File Overview
+- [x] 5:00 Project File Overview + Clean up for a new rebuild
 - [ ] 8:10 main.ts file
 - [ ] 9:55 Generating a Nest Module
 - [ ] 11:00 Generate a Controller
