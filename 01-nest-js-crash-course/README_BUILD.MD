@@ -15,16 +15,9 @@ If you liked this video, check out my other Nest.js tutorials!
 
 Code: [<https://github.com/stuyy/nestjs-crash>...](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbXhiN3ozajdtMGd3QWlxY3JSSzZZTjJqQ0xIQXxBQ3Jtc0tsRGFadm1IX3MtbG9xcDk0SDRoZEdBcW1ZMUFkejdaendnVkdHLTZTakdqZkRNclQwbmxudEN1N3F6UjhzMWlkU1NOVFdtWUNKNi1nWTFaQXRsUWhMeFhpYkNFY0QyRk1jXzBoQS1YQm5KaDZoRnlTZw&q=https%3A%2F%2Fgithub.com%2Fstuyy%2Fnestjs-crash-course&v=xzu3QXwo1BU)
 
-## Support the Channel
+##  Schedule
 
-Become a Member: <https://www.youtube.com/ansonthedevel>...
-Become a Patreon:   / stuyy  
-Buy me a Coffee: <http://ko-fi.com/anson>
-Donate on PayPal: <https://paypal.me/ansonfoong>
-
-##  Connect with me
-
-- [ ] 0:00 Introduction
+- [x] 0:00 Introduction
 - [ ] 2:00 Install Nest CLI
 - [ ] 3:10 Create Nest Project
 - [ ] 5:00 Project File Overview
