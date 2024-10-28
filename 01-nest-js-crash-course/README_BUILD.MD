@@ -27,7 +27,7 @@ Code: [<https://github.com/stuyy/nestjs-crash>...](https://www.youtube.com/redir
 - [x] 11:00 Generate a Controller\
   `nest g controller /users/controllers/users`
 - [x] 14:00 Handling Routes
-- [ ] 19:50 Post Requests
+- [x] 19:50 Post Requests
 - [ ] 26:00 Request Bodies and DTOs
 - [ ] 29:40 Route Params
 - [ ] 33:48 Query Params
