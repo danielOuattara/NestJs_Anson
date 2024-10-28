@@ -18,8 +18,8 @@ Code: [<https://github.com/stuyy/nestjs-crash>...](https://www.youtube.com/redir
 ##  Schedule
 
 - [x] 0:00 Introduction
-- [ ] 2:00 Install Nest CLI
-- [ ] 3:10 Create Nest Project
+- [x] 2:00 Install Nest CLI
+- [x] 3:10 Create Nest Project
 - [ ] 5:00 Project File Overview
 - [ ] 8:10 main.ts file
 - [ ] 9:55 Generating a Nest Module
