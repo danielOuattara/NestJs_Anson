@@ -22,9 +22,11 @@ Code: [<https://github.com/stuyy/nestjs-crash>...](https://www.youtube.com/redir
 - [x] 3:10 Create Nest Project
 - [x] 5:00 Project File Overview + Clean up for a new rebuild
 - [x] 8:10 main.ts file
-- [x] 9:55 Generating a Nest Module
-- [ ] 11:00 Generate a Controller
-- [ ] 14:00 Handling Routes
+- [x] 9:55 Generating a Nest Module\
+  `nest g module users`
+- [x] 11:00 Generate a Controller\
+  `nest g controller /users/controllers/users`
+- [] 14:00 Handling Routes
 - [ ] 19:50 Post Requests
 - [ ] 26:00 Request Bodies and DTOs
 - [ ] 29:40 Route Params
