@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Req, Res } from '@nestjs/common';
 import { Request, Response } from 'express';
 import { CreateUserDto } from 'src/users/dto/create-user.dto';
 
@@ -56,5 +56,25 @@ export class UsersController {
   createUser(@Body() userData: CreateUserDto) {
     console.log(userData);
     return {};
+  }
+
+  /*  Express Way !
+  ------------------ */
+  //   @Get(':id')
+  //   getUserById(@Req() request: Request, @Res() response: Response) {
+  //     console.log(request.params);
+  //     response.json({});
+  //   }
+
+  /*  NestJS Way !
+  ------------------ */
+  @Get(':id')
+  getUserById(@Param('id') id: string) {
+    return { id };
+  }
+
+  @Get(':id/posts/:postId')
+  getUserPostById(@Param('id') id: string, @Param('postId') postId: string) {
+    return { id, postId };
   }
 }
