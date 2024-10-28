@@ -22,7 +22,7 @@ Code: [<https://github.com/stuyy/nestjs-crash>...](https://www.youtube.com/redir
 - [x] 3:10 Create Nest Project
 - [x] 5:00 Project File Overview + Clean up for a new rebuild
 - [x] 8:10 main.ts file
-- [ ] 9:55 Generating a Nest Module
+- [x] 9:55 Generating a Nest Module
 - [ ] 11:00 Generate a Controller
 - [ ] 14:00 Handling Routes
 - [ ] 19:50 Post Requests
