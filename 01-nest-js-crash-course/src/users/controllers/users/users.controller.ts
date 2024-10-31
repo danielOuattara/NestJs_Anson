@@ -3,10 +3,12 @@ import {
   Controller,
   Get,
   Param,
+  ParseBoolPipe,
+  ParseIntPipe,
   Post,
   Query,
-  Req,
-  Res,
+  UsePipes,
+  ValidationPipe,
 } from '@nestjs/common';
 import { Request, Response } from 'express';
 import { CreateUserDto } from 'src/users/dto/create-user.dto';
@@ -14,7 +16,10 @@ import { CreateUserDto } from 'src/users/dto/create-user.dto';
 @Controller('users')
 export class UsersController {
   @Get()
-  getUsers(@Query('sortBy') sortBy: string, @Query('email') email: string) {
+  getUsers(
+    @Query('email') email?: string,
+    @Query('sortdesc', ParseBoolPipe) sortBy?: boolean | undefined,
+  ) {
     console.log(sortBy, email);
     return [
       { id: 1, username: 'John', email: 'john@email.com' },
@@ -52,34 +57,15 @@ export class UsersController {
     ];
   }
 
-  /*  Express Way !
-  ------------------ */
-  //   @Post()
-  //   createUser(@Req() request: Request, @Res() response: Response) {
-  //     console.log(request.body);
-  //     response.send('User Created');
-  //   }
-
-  /*  NestJS Way !
-  ------------------ */
   @Post()
+  @UsePipes(new ValidationPipe({ transform: true }))
   createUser(@Body() userData: CreateUserDto) {
     console.log(userData);
     return {};
   }
 
-  /*  Express Way !
-  ------------------ */
-  //   @Get(':id')
-  //   getUserById(@Req() request: Request, @Res() response: Response) {
-  //     console.log(request.params);
-  //     response.json({});
-  //   }
-
-  /*  NestJS Way !
-  ------------------ */
   @Get(':id')
-  getUserById(@Param('id') id: string) {
+  getUserById(@Param('id', ParseIntPipe) id: number) {
     return { id };
   }
 

@@ -31,7 +31,9 @@ Code: [<https://github.com/stuyy/nestjs-crash>...](https://www.youtube.com/redir
 - [x] 26:00 Request Bodies and DTOs
 - [x] 29:40 Route Params
 - [x] 33:48 Query Params
-- [ ] 35:46 Validation
+- [x] 35:46 Validation\
+  `npm i class-validator class-transformer`\
+  <https://docs.nestjs.com/techniques/validation>
 - [ ] 47:00 Services & Providers
 - [ ] 1:03:18 Middleware
 - [ ] 1:17:36 Pipes & Transformations
