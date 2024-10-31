@@ -10,21 +10,27 @@ import {
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
-import { Request, Response } from 'express';
 import { CreateUserDto } from 'src/users/dto/create-user.dto';
+import { UsersService } from 'src/users/services/users/users.service';
 
 @Controller('users')
 export class UsersController {
+  constructor(private readonly userService: UsersService) {}
+
+  // @Get()
+  // getUsers(
+  //   @Query('email') email?: string,
+  //   @Query('sortdesc', ParseBoolPipe) sortBy?: boolean | undefined,
+  // ) {
+  //   console.log(sortBy, email);
+  //   return [
+
+  //   ];
+  // }
+
   @Get()
-  getUsers(
-    @Query('email') email?: string,
-    @Query('sortdesc', ParseBoolPipe) sortBy?: boolean | undefined,
-  ) {
-    console.log(sortBy, email);
-    return [
-      { id: 1, username: 'John', email: 'john@email.com' },
-      { id: 2, username: 'Ann', email: 'ann@email.com' },
-    ];
+  getUsers() {
+    return this.userService.fetchUsers();
   }
 
   @Get('posts')
@@ -39,6 +45,7 @@ export class UsersController {
       },
     ];
   }
+
   @Get('/posts/comments')
   getUsersPostsComments() {
     return [
@@ -60,13 +67,12 @@ export class UsersController {
   @Post()
   @UsePipes(new ValidationPipe({ transform: true }))
   createUser(@Body() userData: CreateUserDto) {
-    console.log(userData);
-    return {};
+    return this.userService.createUser(userData);
   }
 
   @Get(':id')
   getUserById(@Param('id', ParseIntPipe) id: number) {
-    return { id };
+    return this.userService.fetchUserById(id);
   }
 
   @Get(':id/posts/:postId')

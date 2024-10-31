@@ -15,7 +15,7 @@ If you liked this video, check out my other Nest.js tutorials!
 
 Code: [<https://github.com/stuyy/nestjs-crash>...](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbXhiN3ozajdtMGd3QWlxY3JSSzZZTjJqQ0xIQXxBQ3Jtc0tsRGFadm1IX3MtbG9xcDk0SDRoZEdBcW1ZMUFkejdaendnVkdHLTZTakdqZkRNclQwbmxudEN1N3F6UjhzMWlkU1NOVFdtWUNKNi1nWTFaQXRsUWhMeFhpYkNFY0QyRk1jXzBoQS1YQm5KaDZoRnlTZw&q=https%3A%2F%2Fgithub.com%2Fstuyy%2Fnestjs-crash-course&v=xzu3QXwo1BU)
 
-##  Schedule
+## Schedule
 
 - [x] 0:00 Introduction
 - [x] 2:00 Install Nest CLI
@@ -34,7 +34,7 @@ Code: [<https://github.com/stuyy/nestjs-crash>...](https://www.youtube.com/redir
 - [x] 35:46 Validation\
   `npm i class-validator class-transformer`\
   <https://docs.nestjs.com/techniques/validation>
-- [ ] 47:00 Services & Providers
+- [X] 47:00 Services & Providers
 - [ ] 1:03:18 Middleware
 - [ ] 1:17:36 Pipes & Transformations
 - [ ] 1:31:44 Guards
