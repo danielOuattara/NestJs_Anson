@@ -30,7 +30,7 @@ Code: [<https://github.com/stuyy/nestjs-crash>...](https://www.youtube.com/redir
 - [x] 19:50 Post Requests
 - [x] 26:00 Request Bodies and DTOs
 - [x] 29:40 Route Params
-- [ ] 33:48 Query Params
+- [x] 33:48 Query Params
 - [ ] 35:46 Validation
 - [ ] 47:00 Services & Providers
 - [ ] 1:03:18 Middleware
