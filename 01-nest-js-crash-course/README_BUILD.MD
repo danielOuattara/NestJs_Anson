@@ -34,7 +34,7 @@ Code: [<https://github.com/stuyy/nestjs-crash>...](https://www.youtube.com/redir
 - [x] 35:46 Validation\
   `npm i class-validator class-transformer`\
   <https://docs.nestjs.com/techniques/validation>
-- [X] 47:00 Services & Providers
-- [ ] 1:03:18 Middleware
+- [x] 47:00 Services & Providers
+- [x] 1:03:18 Middleware
 - [ ] 1:17:36 Pipes & Transformations
 - [ ] 1:31:44 Guards
