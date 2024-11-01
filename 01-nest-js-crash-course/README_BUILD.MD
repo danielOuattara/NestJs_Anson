@@ -36,5 +36,5 @@ Code: [<https://github.com/stuyy/nestjs-crash>...](https://www.youtube.com/redir
   <https://docs.nestjs.com/techniques/validation>
 - [x] 47:00 Services & Providers
 - [x] 1:03:18 Middleware
-- [ ] 1:17:36 Pipes & Transformations
+- [x] 1:17:36 Pipes & Transformations
 - [ ] 1:31:44 Guards

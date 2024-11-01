@@ -35,7 +35,7 @@ export class UsersModule implements NestModule {
     //   method: RequestMethod.GET,
     // });
 
-    // OR
+    // OR apply two middlewares
 
     consumer.apply(UsersMiddleware).forRoutes(
       {
