@@ -30,6 +30,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { UserEntity } from 'typeorm/entities/user.entity';
 
 @Module({
   imports: [
@@ -43,7 +44,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         username: configService.get<string>('DATABASE_USER'),
         password: configService.get<string>('DATABASE_PASSWORD'),
         database: configService.get<string>('DATABASE_NAME'),
-        entities: [], // Add your entities here
+        entities: [UserEntity], // Add your entities here
         synchronize: true,
       }),
       inject: [ConfigService],
