@@ -5,18 +5,21 @@ import {
   Param,
   ParseIntPipe,
   Post,
+  UseGuards,
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
 import { CreateUserDto } from 'src/users/dto/create-user.dto';
-import { ValidateCreateUserPipe } from 'src/users/pipes/validate-create-user/validate-create-user.pipe';
+import { UserAuthGuard } from 'src/users/guards/user-auth-guard/user.auth.guard';
+import { ValidateCreateUserPipe } from 'src/users/pipes/validate-create-user/validate.create.user.pipe';
 import { UsersService } from 'src/users/services/users/users.service';
 
 @Controller('users')
+@UseGuards(UserAuthGuard) // <-- use guard for the whole users controller
 export class UsersController {
   constructor(private readonly userService: UsersService) {}
 
-  // @Get()
+  // @Get(),
   // getUsers(
   //   @Query('email') email?: string,
   //   @Query('sortdesc', ParseBoolPipe) sortBy?: boolean | undefined,
@@ -66,6 +69,7 @@ export class UsersController {
 
   @Post()
   @UsePipes(new ValidationPipe({ transform: true }))
+  // @UseGuards(UserAuthGuard) // <-- use guard for createUser() only
   createUser(@Body(ValidateCreateUserPipe) userData: CreateUserDto) {
     console.log('userData = ', userData);
     return this.userService.createUser(userData);
