@@ -13,8 +13,12 @@ with TypeORM entities and repositories to build persistent applications!
 
 ## Schedule
 
-- [ ] 00:00 introduction
-- [ ] 06:12 create the Database
+- [x] 00:01 introduction
+- [x] 03:00 install packages\
+  `npm i @nestjs/typeorm typeorm mysql2`
+- [x] 06:12 create and connect to the Database  
+- [x] 07:34 setup .env file\
+  `npm i --save @nestjs/config`  
 - [ ] 16:14 insert users into the database
 - [ ] 17:04 create a service class
 - [ ] 18:07 create a route
