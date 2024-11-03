@@ -74,7 +74,7 @@ Donate on PayPal: <https://paypal.me/ansonfoong>
   ```
 
 - [x] 17:10 Create Query
-- [ ] 20:00 Auto Schema File
+- [x] 20:00 Auto Schema File
 - [ ] 21:10 GraphQL Playground
 - [ ] 24:17 Query Arguments
 - [ ] 34:00 UserSetting Schema
