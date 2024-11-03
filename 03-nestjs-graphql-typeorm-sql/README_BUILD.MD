@@ -61,7 +61,19 @@ Donate on PayPal: <https://paypal.me/ansonfoong>
 
 - [x] 15:30 Create User Resolver\
   `/src/graphql/resolvers/UserResolver.ts`
-- [ ] 17:10 Create Query
+
+  ```ts
+  import { Query, Resolver } from '@nestjs/graphql';
+  @Resolver()
+  export class UserResolver {
+    @Query(() => UserResolver)
+    getUser() {
+      return { id: 1, username: 'John', displayName: 'John the John' };
+    }
+  }
+  ```
+
+- [x] 17:10 Create Query
 - [ ] 20:00 Auto Schema File
 - [ ] 21:10 GraphQL Playground
 - [ ] 24:17 Query Arguments
