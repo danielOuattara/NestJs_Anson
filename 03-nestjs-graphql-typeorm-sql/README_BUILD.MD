@@ -75,8 +75,32 @@ Donate on PayPal: <https://paypal.me/ansonfoong>
 
 - [x] 17:10 Create Query
 - [x] 20:00 Auto Schema File
-- [ ] 21:10 GraphQL Playground
-- [ ] 24:17 Query Arguments
+- [x] 21:10 GraphQL Playground\
+   `http://localhost:3000/graphql?`
+
+  ```gql
+  query{
+    getUser{
+      id
+      username
+      displayName
+    }
+    
+    userById(id: 10) {
+      id
+      username
+      displayName
+    }
+    
+    getUsers{
+      id 
+      username 
+      displayName
+    }
+  }
+  ```
+
+- [ ] 24:17 Query Arguments
 - [ ] 34:00 UserSetting Schema
 - [ ] 42:00 Resolving Fields
 - [ ] 1:00:14 Mutations
