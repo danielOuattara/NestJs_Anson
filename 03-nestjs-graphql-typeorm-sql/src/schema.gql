@@ -4,8 +4,8 @@
 
 type UserSettingsModel {
   userId: Int!
-  receivedNotification: Boolean!
-  receivedEmails: Boolean!
+  receiveNotification: Boolean!
+  receiveEmails: Boolean!
 }
 
 type UserModel {

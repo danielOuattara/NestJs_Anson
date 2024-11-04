@@ -281,7 +281,61 @@ Donate on PayPal: <https://paypal.me/ansonfoong>
   }
   ```
 
-- [ ] 40:00 Testing  on GraphQL Playground
+- [x] **40:00 GraphQL Playground**
+
+  Testing user setting
+
+  ```gql
+  query{
+    getUser{
+      id 
+      username 
+      displayName
+      settings {
+        userId
+        receivedNotification
+        receivedEmails
+      }
+    }
+    
+    userById(id: 1) {
+      id
+      username
+      displayName
+      settings {
+        userId
+        receivedNotification
+        receivedEmails
+      }
+    }
+    
+    getUsers{
+      id 
+      username 
+      displayName
+      settings {
+        userId
+        receivedNotification
+        receivedEmails
+      }
+    }
+  }
+  ```
+
+- [x] **42:00 add user settings mock data**
+  
+  To resolve the user `settings` field from `UserSettingsModel`
+
+  add `/src/__mocks__/mock-users-settings.ts`
+
+  ```ts
+    export const mockUsersSettings = [
+      { userId: 1, receivedNotification: false, receivedEmails: true },
+      //   { userId: 2, receivedNotification: true, receivedEmails: true },
+      { userId: 3, receivedNotification: false, receivedEmails: true },
+    ];
+  ```
+
 - [ ] 42:00 Resolving Fields
 - [ ] 1:00:14 Mutations
 - [ ] 1:09:00 InputTypes
