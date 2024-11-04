@@ -12,6 +12,6 @@ export class UserModel {
   @Field({ nullable: true })
   displayName?: string;
 
-  @Field({ nullable: true })
+  @Field()
   settings?: UserSettingsModel;
 }

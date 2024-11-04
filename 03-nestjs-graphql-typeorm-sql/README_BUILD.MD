@@ -336,7 +336,95 @@ Donate on PayPal: <https://paypal.me/ansonfoong>
     ];
   ```
 
-- [ ] 42:00 Resolving Fields
+- [x] **42:00 Resolving Fields**
+
+  ```ts
+    import {
+      Args,
+      Int,
+      Parent,
+      Query,
+      ResolveField,
+      Resolver,
+    } from '@nestjs/graphql';
+    import { UserModel } from '../models/UserModel';
+    import { mockUsers } from 'src/__mocks__/mock-users';
+    import { UserSettingsModel } from '../models/UserSettingsModel';
+
+    @Resolver(() => UserModel)
+    export class UserResolver {
+      @Query(() => UserModel)
+      getUser() {
+        return { id: 1, username: 'John', displayName: 'John the John' };
+      }
+
+      @Query(() => UserModel, { nullable: true, name: 'userById' })
+      getUserById(@Args('id', { type: () => Int }) id: number) {
+        const user = mockUsers.find((user) => user.id === id);
+        return user;
+      }
+
+      @Query(() => [UserModel], { nullable: true })
+      getUsers() {
+        return mockUsers;
+      }
+
+      // caution: logic duplicated with `settings` fields
+      @ResolveField(() => UserSettingsModel, {
+        name: 'settings', // use this to avoid duplicated logic
+        nullable: true,
+      })
+      getUserSettings(@Parent() user: UserModel) {
+        console.log(user);
+        return mockUsersSettings.find((setting) => setting.userId === user.id);
+      }
+    }
+  ```
+  
+- [x] **51:00 GraphQL Playground**
+
+  ```gql
+    query {
+      getUser {
+        id
+        username
+        displayName
+        settings {
+        userId
+        receiveNotification
+        receiveEmails
+        }
+        # getUserSettings {
+        #  userId
+        #}
+      }
+
+      userById(id: 1) {
+        id
+        username
+        displayName
+        settings {
+        userId
+        }
+        # getUserSettings {
+        #   userId
+        # }
+      }
+
+      getUsers {
+        id
+        username
+        displayName
+        settings {
+        userId
+        }
+        # getUserSettings {
+        #   userId
+        # }
+      }
+    }
+  ```
+
 - [ ] 1:00:14 Mutations
 - [ ] 1:09:00 InputTypes
 - [ ] 1:23:20 Setting up TypeORM & SQL
