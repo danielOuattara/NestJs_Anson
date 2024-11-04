@@ -236,7 +236,52 @@ Donate on PayPal: <https://paypal.me/ansonfoong>
   }
   ```
   
-- [ ] 34:00 UserSetting Schema
+- [ ] **34:00 UserSetting Schema**
+
+  About more complex types than `number` or `string`
+
+  create `/src/graphql/models/UserSettingsModel.ts` and add few fields there
+
+  ```ts
+  import { Field, Int, ObjectType } from '@nestjs/graphql';
+
+  @ObjectType()
+  export class UserSettingsModel {
+    @Field((type) => Int)
+    userId: number;
+
+    @Field({ defaultValue: false })
+    receivedNotification: boolean;
+
+    @Field({ defaultValue: false })
+    receivedEmails: boolean;
+  }
+
+  ```
+
+  link `UserSettingsModel` to `/src/graphql/models/UserModel.ts`
+
+  ```ts
+  import { Field, Int, ObjectType } from '@nestjs/graphql';
+  import { UserSettingsModel } from './UserSettingsModel';
+
+  @ObjectType()
+  export class UserModel {
+    @Field(() => Int)
+    id: number;
+
+    @Field()
+    username: string;
+
+    @Field({ nullable: true })
+    displayName?: string;
+
+    @Field({ nullable: true }) // new !
+    settings?: UserSettingsModel;
+  }
+  ```
+
+- [ ] 40:00 Testing  on GraphQL Playground
 - [ ] 42:00 Resolving Fields
 - [ ] 1:00:14 Mutations
 - [ ] 1:09:00 InputTypes
